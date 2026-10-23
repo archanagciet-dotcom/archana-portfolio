@@ -4,14 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description"
-        content="G. Archana - B.E. Computer Science Engineering student, Full Stack Developer and AI intern.">
-
-  <title>G. Archana | Personal Portfolio</title>
+  <meta name="description" content="G. Archana - B.E. Computer Science Engineering student, Full Stack Developer and AI intern.">
+  <title>G. Archana | Developer Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -25,11 +21,7 @@
       --border: #302b43;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     html {
       scroll-behavior: smooth;
@@ -43,14 +35,7 @@
       line-height: 1.7;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button {
-      font: inherit;
-    }
+    a { color: inherit; text-decoration: none; }
 
     .container {
       width: min(1100px, 90%);
@@ -61,7 +46,7 @@
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(11, 11, 18, .96);
+      background: rgba(11,11,18,.96);
       border-bottom: 1px solid var(--border);
       backdrop-filter: blur(15px);
     }
@@ -79,27 +64,21 @@
       white-space: nowrap;
     }
 
-    .logo span,
-    .purple {
-      color: var(--purple);
-    }
+    .logo span, .purple { color: var(--purple); }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 17px;
       list-style: none;
     }
 
     .nav-links a {
       color: var(--muted);
-      font-size: .88rem;
-      transition: color .2s;
+      font-size: .86rem;
     }
 
-    .nav-links a:hover {
-      color: var(--cyan);
-    }
+    .nav-links a:hover { color: var(--cyan); }
 
     .menu {
       display: none;
@@ -112,9 +91,7 @@
       cursor: pointer;
     }
 
-    section {
-      padding: 85px 0;
-    }
+    section { padding: 85px 0; }
 
     .hero {
       min-height: 82vh;
@@ -172,9 +149,7 @@
       text-align: center;
     }
 
-    .btn:hover {
-      transform: translateY(-3px);
-    }
+    .btn:hover { transform: translateY(-3px); }
 
     .primary {
       background: var(--purple);
@@ -206,10 +181,7 @@
       margin: 0 auto 20px;
     }
 
-    .profile p {
-      color: var(--muted);
-      margin-top: 8px;
-    }
+    .profile p { color: var(--muted); margin-top: 8px; }
 
     .status {
       color: var(--cyan) !important;
@@ -217,9 +189,7 @@
       margin-top: 15px !important;
     }
 
-    .section-title {
-      margin-bottom: 35px;
-    }
+    .section-title { margin-bottom: 35px; }
 
     .section-title h2 {
       font-size: clamp(2rem, 4vw, 3rem);
@@ -254,13 +224,9 @@
       margin-bottom: 10px;
     }
 
-    .detail {
-      margin: 18px 0;
-    }
+    .detail { margin: 18px 0; }
 
-    .detail strong {
-      display: block;
-    }
+    .detail strong { display: block; }
 
     .detail span {
       color: var(--muted);
@@ -288,9 +254,7 @@
       border-color: var(--purple);
     }
 
-    .skill .icon {
-      font-size: 1.7rem;
-    }
+    .skill .icon { font-size: 1.7rem; }
 
     .skill h3 {
       font-size: 1rem;
@@ -314,9 +278,7 @@
       padding: 0 0 30px;
     }
 
-    .timeline-item:last-child {
-      padding-bottom: 0;
-    }
+    .timeline-item:last-child { padding-bottom: 0; }
 
     .timeline-item::before {
       content: "";
@@ -329,13 +291,9 @@
       border-radius: 50%;
     }
 
-    .timeline-item h3 {
-      margin: 6px 0;
-    }
+    .timeline-item h3 { margin: 6px 0; }
 
-    .timeline-item p {
-      color: var(--muted);
-    }
+    .timeline-item p { color: var(--muted); }
 
     .timeline-item .date {
       color: var(--cyan);
@@ -406,9 +364,7 @@
       overflow-wrap: anywhere;
     }
 
-    .contact-links a:hover {
-      color: var(--cyan);
-    }
+    .contact-links a:hover { color: var(--cyan); }
 
     footer {
       padding: 25px 0;
@@ -417,43 +373,21 @@
       border-top: 1px solid var(--border);
     }
 
+    [hidden] { display: none !important; }
+
     @media (max-width: 900px) {
-      .nav-links {
-        gap: 12px;
-      }
-
-      .nav-links a {
-        font-size: .8rem;
-      }
-
-      .skills {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .nav-links { gap: 12px; }
+      .nav-links a { font-size: .8rem; }
+      .skills { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 760px) {
-      .hero, .grid-2, .contact-box {
-        grid-template-columns: 1fr;
-      }
+      .hero, .grid-2, .contact-box { grid-template-columns: 1fr; }
+      .hero { padding-top: 60px; min-height: auto; }
+      .hero-visual { grid-row: 1; }
+      .profile { max-width: 350px; margin: auto; width: 100%; }
 
-      .hero {
-        padding-top: 60px;
-        min-height: auto;
-      }
-
-      .hero-visual {
-        grid-row: 1;
-      }
-
-      .profile {
-        max-width: 350px;
-        margin: auto;
-        width: 100%;
-      }
-
-      .menu {
-        display: block;
-      }
+      .menu { display: block; }
 
       .nav-links {
         display: none;
@@ -469,31 +403,15 @@
         gap: 18px;
       }
 
-      .nav-links.open {
-        display: flex;
-      }
+      .nav-links.open { display: flex; }
     }
 
     @media (max-width: 450px) {
-      section {
-        padding: 60px 0;
-      }
-
-      .skills {
-        gap: 10px;
-      }
-
-      .skill, .card {
-        padding: 17px;
-      }
-
-      .contact-box {
-        padding: 22px;
-      }
-
-      h1 {
-        letter-spacing: -1px;
-      }
+      section { padding: 60px 0; }
+      .skills { gap: 10px; }
+      .skill, .card { padding: 17px; }
+      .contact-box { padding: 22px; }
+      h1 { letter-spacing: -1px; }
     }
   </style>
 </head>
@@ -619,8 +537,8 @@
           </div>
 
           <div class="detail">
-            <strong>🎯 Career Interest</strong>
-            <span>Full Stack Development and AI</span>
+            <strong>✉ Email</strong>
+            <span><a href="mailto:archana.g.ciet@gmail.com">archana.g.ciet@gmail.com</a></span>
           </div>
         </div>
       </div>
@@ -642,67 +560,56 @@
           <h3>HTML</h3>
           <p>Web page structure</p>
         </div>
-
         <div class="skill">
           <div class="icon">🎨</div>
           <h3>CSS</h3>
           <p>Styling and responsive layouts</p>
         </div>
-
         <div class="skill">
           <div class="icon">⚡</div>
           <h3>JavaScript</h3>
           <p>Interactive web applications</p>
         </div>
-
         <div class="skill">
           <div class="icon">⚛️</div>
           <h3>React</h3>
           <p>Frontend development</p>
         </div>
-
         <div class="skill">
           <div class="icon">☕</div>
           <h3>Java</h3>
           <p>Programming</p>
         </div>
-
         <div class="skill">
           <div class="icon">🔧</div>
           <h3>Spring Boot</h3>
           <p>Backend and REST APIs</p>
         </div>
-
         <div class="skill">
           <div class="icon">🗄️</div>
           <h3>MySQL</h3>
           <p>Database management</p>
         </div>
-
         <div class="skill">
           <div class="icon">🤖</div>
           <h3>Artificial Intelligence</h3>
           <p>AI concepts and applications</p>
         </div>
-
         <div class="skill">
           <div class="icon">🔗</div>
           <h3>REST APIs</h3>
           <p>Frontend-backend integration</p>
         </div>
-
         <div class="skill">
           <div class="icon">📂</div>
           <h3>Git & GitHub</h3>
           <p>Version control</p>
         </div>
-
         <div class="skill">
           <div class="icon">📱</div>
           <h3>Responsive Design</h3>
           <p>Mobile-friendly websites</p>
         </div>
-
         <div class="skill">
           <div class="icon">🧩</div>
           <h3>Problem Solving</h3>
@@ -737,8 +644,7 @@
             <h3>Full Stack Development</h3>
             <p>
               Completed a Full Stack Development course to learn
-              the concepts and technologies involved in building
-              web applications.
+              concepts and technologies involved in building web applications.
             </p>
           </div>
         </div>
@@ -757,7 +663,7 @@
       <div class="grid-2">
         <div class="card">
           <h3>💻 Full Stack Development Intern</h3>
-          <p class="purple"><strong>Dot Com Infoway Ltd.</strong></p>
+          <p class="purple"><strong>Dot Com Infoway</strong></p>
           <p>Madurai, Tamil Nadu</p>
           <p>
             Attended a Full Stack Development internship and worked
@@ -778,9 +684,8 @@
           <p>Bangalore, Karnataka</p>
           <p>
             Attended an AI internship to gain exposure to Artificial
-            Intelligence and its applications. This experience
-            supported my interest in emerging technologies and
-            intelligent software solutions.
+            Intelligence concepts and applications and learn about
+            emerging intelligent software technologies.
           </p>
           <div class="tags">
             <span>Artificial Intelligence</span>
@@ -806,8 +711,8 @@
           <p>
             A student record management application developed as
             part of my Full Stack Development internship at
-            Dot Com Infoway, Madurai. The system aims to organize
-            student details and simplify record management.
+            Dot Com Infoway, Madurai. It aims to organize student
+            details and simplify record management.
           </p>
           <div class="tags">
             <span>Full Stack Development</span>
@@ -820,8 +725,8 @@
           <h3>02. Sentinel Vault</h3>
           <p>
             A secure file management application featuring
-            authentication, file uploading, file previews,
-            downloading and user-specific file access.
+            authentication, file uploading, previews, downloads
+            and user-specific file access.
           </p>
           <div class="tags">
             <span>React</span>
@@ -835,8 +740,8 @@
         <article class="card">
           <h3>03. Personal Portfolio Website</h3>
           <p>
-            A responsive portfolio website to showcase my
-            education, skills, internships, projects and certificates.
+            A responsive portfolio website to showcase my education,
+            skills, internships, projects and certificates.
           </p>
           <div class="tags">
             <span>HTML</span>
@@ -874,7 +779,7 @@
         <div class="card">
           <img
             src="certificate.jpg"
-            alt="Internship completion certificate from Dot Com Infoway"
+            alt="Full Stack Development internship certificate from Dot Com Infoway"
             class="certificate-image"
             id="certificateImage"
             hidden
@@ -889,7 +794,7 @@
           </div>
 
           <h3>Full Stack Development Internship</h3>
-          <p><strong>Organization:</strong> Dot Com Infoway Ltd.</p>
+          <p><strong>Organization:</strong> Dot Com Infoway</p>
           <p><strong>Project:</strong> Student Management System</p>
           <p><strong>Location:</strong> Madurai</p>
 
@@ -922,8 +827,7 @@
             Mindenious, Bangalore.
           </p>
           <p>
-            Upload your AI internship certificate separately
-            when available.
+            Add the AI internship certificate when it is available.
           </p>
           <div class="tags">
             <span>Artificial Intelligence</span>
@@ -949,7 +853,7 @@
           </p>
 
           <a class="btn primary"
-             href="mailto:your.email@example.com">
+             href="mailto:archana.g.ciet@gmail.com">
             Email Me ↗
           </a>
         </div>
@@ -957,8 +861,8 @@
         <div class="contact-links">
           <h3>Contact Information</h3>
 
-          <a href="mailto:your.email@example.com">
-            ✉ your.email@example.com
+          <a href="mailto:archana.g.ciet@gmail.com">
+            ✉ archana.g.ciet@gmail.com
           </a>
 
           <a href="https://www.linkedin.com/"
@@ -1002,13 +906,11 @@
     });
   });
 
-  // Show certificate links and image when the image exists
+  // Certificate display
   const certificateImage = document.getElementById("certificateImage");
-  const certificatePlaceholder =
-    document.getElementById("certificatePlaceholder");
+  const certificatePlaceholder = document.getElementById("certificatePlaceholder");
   const viewCertificate = document.getElementById("viewCertificate");
-  const downloadCertificate =
-    document.getElementById("downloadCertificate");
+  const downloadCertificate = document.getElementById("downloadCertificate");
 
   function showCertificate() {
     certificateImage.hidden = false;
@@ -1026,14 +928,12 @@
     downloadCertificate.hidden = true;
   });
 
-  // Handle cached image loads
   if (certificateImage.complete && certificateImage.naturalWidth > 0) {
     showCertificate();
   }
 
-  // Current copyright year
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
+  // Footer year
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
