@@ -1,0 +1,1040 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="G. Archana - B.E. Computer Science Engineering student, Full Stack Developer and AI intern.">
+
+  <title>G. Archana | Personal Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b0b12;
+      --card: #151522;
+      --text: #f7f5ff;
+      --muted: #b6b2c9;
+      --purple: #b49aff;
+      --cyan: #72ead8;
+      --border: #302b43;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(11, 11, 18, .96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(15px);
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font: 700 1.45rem "Space Grotesk", sans-serif;
+      white-space: nowrap;
+    }
+
+    .logo span,
+    .purple {
+      color: var(--purple);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: .88rem;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan);
+    }
+
+    .menu {
+      display: none;
+      background: transparent;
+      color: white;
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 85px 0;
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .eyebrow {
+      color: var(--cyan);
+      letter-spacing: 3px;
+      font-size: .8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Space Grotesk", sans-serif;
+      line-height: 1.25;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      letter-spacing: -2px;
+      margin-bottom: 18px;
+    }
+
+    .hero h2 {
+      color: var(--purple);
+      font-size: 1.5rem;
+      margin-bottom: 18px;
+    }
+
+    .description {
+      color: var(--muted);
+      margin-bottom: 25px;
+      max-width: 620px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 19px;
+      border-radius: 9px;
+      font-weight: 700;
+      transition: transform .2s;
+      text-align: center;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .primary {
+      background: var(--purple);
+      color: #181125;
+    }
+
+    .secondary {
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    .profile {
+      border: 1px solid var(--border);
+      background: radial-gradient(circle at top, #33274d, var(--card) 65%);
+      border-radius: 25px;
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 155px;
+      height: 155px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--purple), var(--cyan));
+      color: #1b1429;
+      display: grid;
+      place-items: center;
+      font: 700 3rem "Space Grotesk", sans-serif;
+      margin: 0 auto 20px;
+    }
+
+    .profile p {
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .status {
+      color: var(--cyan) !important;
+      font-size: .85rem;
+      margin-top: 15px !important;
+    }
+
+    .section-title {
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .section-title p:not(.eyebrow) {
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      padding: 27px;
+      min-width: 0;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 13px;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .detail {
+      margin: 18px 0;
+    }
+
+    .detail strong {
+      display: block;
+    }
+
+    .detail span {
+      color: var(--muted);
+      font-size: .95rem;
+      display: block;
+      overflow-wrap: anywhere;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .skill {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      padding: 20px;
+      transition: transform .2s, border-color .2s;
+    }
+
+    .skill:hover {
+      transform: translateY(-4px);
+      border-color: var(--purple);
+    }
+
+    .skill .icon {
+      font-size: 1.7rem;
+    }
+
+    .skill h3 {
+      font-size: 1rem;
+      margin: 8px 0;
+    }
+
+    .skill p {
+      font-size: .85rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .timeline {
+      border-left: 2px solid var(--purple);
+      padding-left: 25px;
+      margin-left: 9px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 30px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -33px;
+      top: 7px;
+      width: 13px;
+      height: 13px;
+      background: var(--cyan);
+      border-radius: 50%;
+    }
+
+    .timeline-item h3 {
+      margin: 6px 0;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+    }
+
+    .timeline-item .date {
+      color: var(--cyan);
+      font-size: .87rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .tags span {
+      background: #29213b;
+      color: #d2c2ff;
+      border-radius: 6px;
+      padding: 5px 10px;
+      font-size: .8rem;
+    }
+
+    .certificate-image {
+      display: block;
+      width: 100%;
+      max-height: 440px;
+      object-fit: contain;
+      background: #f3f0e6;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .certificate-placeholder {
+      min-height: 210px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      border: 1px dashed var(--purple);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 20px;
+      color: var(--muted);
+    }
+
+    .certificate-placeholder span {
+      font-size: 2.5rem;
+      display: block;
+    }
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+      background: linear-gradient(120deg, #211a32, var(--card));
+      border: 1px solid var(--border);
+      padding: 35px;
+      border-radius: 20px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      margin: 12px 0;
+    }
+
+    .contact-links a {
+      display: block;
+      margin: 13px 0;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-links a:hover {
+      color: var(--cyan);
+    }
+
+    footer {
+      padding: 25px 0;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a {
+        font-size: .8rem;
+      }
+
+      .skills {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .hero, .grid-2, .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 60px;
+        min-height: auto;
+      }
+
+      .hero-visual {
+        grid-row: 1;
+      }
+
+      .profile {
+        max-width: 350px;
+        margin: auto;
+        width: 100%;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        padding: 20px 5%;
+        background: #11101a;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 450px) {
+      section {
+        padding: 60px 0;
+      }
+
+      .skills {
+        gap: 10px;
+      }
+
+      .skill, .card {
+        padding: 17px;
+      }
+
+      .contact-box {
+        padding: 22px;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="container">
+    <a class="logo" href="#home">G<span>.</span> Archana</a>
+
+    <button class="menu" id="menu"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="navLinks">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Internships</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HOME -->
+  <section class="container hero" id="home">
+    <div>
+      <p class="eyebrow">Welcome to my portfolio</p>
+
+      <h1>Hi, I'm <span class="purple">G. Archana</span></h1>
+
+      <h2>Aspiring Full Stack Developer</h2>
+
+      <p class="description">
+        I'm a B.E. Computer Science and Engineering student at
+        Coimbatore Institute of Engineering and Technology.
+        I have completed a Full Stack Development course and gained
+        internship experience in Full Stack Development and Artificial
+        Intelligence. I enjoy building applications and learning
+        technologies that solve real-world problems.
+      </p>
+
+      <div class="buttons">
+        <a href="#projects" class="btn primary">Explore My Projects ↗</a>
+        <a href="#contact" class="btn secondary">Contact Me</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="profile">
+        <div class="avatar">GA</div>
+        <h2>G. Archana</h2>
+        <p>B.E. Computer Science and Engineering</p>
+        <p>Full Stack Development | Artificial Intelligence</p>
+        <p class="status">● Open to learning opportunities</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <p class="eyebrow">Get to know me</p>
+        <h2>About Me</h2>
+        <p>My education, interests and professional goals.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Who Am I?</h3>
+          <p>
+            I'm G. Archana, currently pursuing a Bachelor of Engineering
+            in Computer Science and Engineering at Coimbatore Institute
+            of Engineering and Technology.
+          </p>
+          <p>
+            I have completed a Full Stack Development course and
+            attended a Full Stack Development internship at Dot Com
+            Infoway, Madurai, where I worked on a Student Management
+            System.
+          </p>
+          <p>
+            I have also attended an Artificial Intelligence internship
+            at Mindenious, Bangalore. These experiences have helped
+            me explore software development and AI.
+          </p>
+          <p>
+            My goal is to become a skilled developer, improve my
+            technical knowledge, and contribute to useful software
+            applications.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Quick Information</h3>
+
+          <div class="detail">
+            <strong>🎓 Degree</strong>
+            <span>B.E. Computer Science and Engineering</span>
+          </div>
+
+          <div class="detail">
+            <strong>🏫 College</strong>
+            <span>Coimbatore Institute of Engineering and Technology</span>
+          </div>
+
+          <div class="detail">
+            <strong>💻 Development Course</strong>
+            <span>Full Stack Development — Completed</span>
+          </div>
+
+          <div class="detail">
+            <strong>📍 Internship Experience</strong>
+            <span>Dot Com Infoway, Madurai</span>
+            <span>Mindenious, Bangalore</span>
+          </div>
+
+          <div class="detail">
+            <strong>🎯 Career Interest</strong>
+            <span>Full Stack Development and AI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-title">
+        <p class="eyebrow">My technical toolkit</p>
+        <h2>Technical Skills</h2>
+        <p>Technologies to showcase based on your actual experience.</p>
+      </div>
+
+      <div class="skills">
+        <div class="skill">
+          <div class="icon">🌐</div>
+          <h3>HTML</h3>
+          <p>Web page structure</p>
+        </div>
+
+        <div class="skill">
+          <div class="icon">🎨</div>
+          <h3>CSS</h3>
+          <p>Styling and responsive layouts</p>
+        </div>
+
+        <div class="skill">
+          <div class="icon">⚡</div>
+          <h3>JavaScript</h3>
+          <p>Interactive web applications</p>
+        </div>
+
+        <div class="skill">
+          <div class="icon">⚛️</div>
+          <h3>React</h3>
+          <p>Frontend development</p>
+        </div>
+
+        <div class="skill">
+          <div class="icon">☕</div>
+          <h3>Java</h3>
+          <p>Programming</p>
+        </div>
+
+        <div class="skill">
+          <div class="icon">🔧</div>
+          <h3>Spring Boot</h3>
+          <p>Backend and REST APIs</p>
+        </div>
+
+        <div class="skill">
+          <div class="icon">🗄️</div>
+          <h3>MySQL</h3>
+          <p>Database management</p>
+        </div>
+
+        <div class="skill">
+          <div class="icon">🤖</div>
+          <h3>Artificial Intelligence</h3>
+          <p>AI concepts and applications</p>
+        </div>
+
+        <div class="skill">
+          <div class="icon">🔗</div>
+          <h3>REST APIs</h3>
+          <p>Frontend-backend integration</p>
+        </div>
+
+        <div class="skill">
+          <div class="icon">📂</div>
+          <h3>Git & GitHub</h3>
+          <p>Version control</p>
+        </div>
+
+        <div class="skill">
+          <div class="icon">📱</div>
+          <h3>Responsive Design</h3>
+          <p>Mobile-friendly websites</p>
+        </div>
+
+        <div class="skill">
+          <div class="icon">🧩</div>
+          <h3>Problem Solving</h3>
+          <p>Analytical thinking</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <div class="section-title">
+        <p class="eyebrow">Academic background</p>
+        <h2>Education</h2>
+      </div>
+
+      <div class="card">
+        <div class="timeline">
+          <div class="timeline-item">
+            <p class="date">Currently Pursuing</p>
+            <h3>B.E. Computer Science and Engineering</h3>
+            <p><strong>Coimbatore Institute of Engineering and Technology</strong></p>
+            <p>
+              Studying computer science, programming, software
+              development and related engineering subjects.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <p class="date">Course Completed</p>
+            <h3>Full Stack Development</h3>
+            <p>
+              Completed a Full Stack Development course to learn
+              the concepts and technologies involved in building
+              web applications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERNSHIPS -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-title">
+        <p class="eyebrow">Professional learning</p>
+        <h2>Internship Experience</h2>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>💻 Full Stack Development Intern</h3>
+          <p class="purple"><strong>Dot Com Infoway Ltd.</strong></p>
+          <p>Madurai, Tamil Nadu</p>
+          <p>
+            Attended a Full Stack Development internship and worked
+            on a Student Management System project. The project
+            focused on organizing student information and managing
+            student records through an application.
+          </p>
+          <div class="tags">
+            <span>Full Stack Development</span>
+            <span>Student Management System</span>
+            <span>Web Application</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🤖 Artificial Intelligence Intern</h3>
+          <p class="purple"><strong>Mindenious</strong></p>
+          <p>Bangalore, Karnataka</p>
+          <p>
+            Attended an AI internship to gain exposure to Artificial
+            Intelligence and its applications. This experience
+            supported my interest in emerging technologies and
+            intelligent software solutions.
+          </p>
+          <div class="tags">
+            <span>Artificial Intelligence</span>
+            <span>AI Learning</span>
+            <span>Emerging Technology</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-title">
+        <p class="eyebrow">Things I've worked on</p>
+        <h2>My Projects</h2>
+      </div>
+
+      <div class="grid-2">
+        <article class="card">
+          <h3>01. Student Management System</h3>
+          <p>
+            A student record management application developed as
+            part of my Full Stack Development internship at
+            Dot Com Infoway, Madurai. The system aims to organize
+            student details and simplify record management.
+          </p>
+          <div class="tags">
+            <span>Full Stack Development</span>
+            <span>Student Records</span>
+            <span>Web Application</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>02. Sentinel Vault</h3>
+          <p>
+            A secure file management application featuring
+            authentication, file uploading, file previews,
+            downloading and user-specific file access.
+          </p>
+          <div class="tags">
+            <span>React</span>
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>MySQL</span>
+            <span>JWT</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>03. Personal Portfolio Website</h3>
+          <p>
+            A responsive portfolio website to showcase my
+            education, skills, internships, projects and certificates.
+          </p>
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>04. AI Learning Experience</h3>
+          <p>
+            A showcase of my Artificial Intelligence internship
+            experience at Mindenious, Bangalore. A specific AI
+            project can be added here when available.
+          </p>
+          <div class="tags">
+            <span>Artificial Intelligence</span>
+            <span>Internship</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="certificates">
+    <div class="container">
+      <div class="section-title">
+        <p class="eyebrow">My achievements</p>
+        <h2>Certificates</h2>
+        <p>Internship certificate and professional learning.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <img
+            src="certificate.jpg"
+            alt="Internship completion certificate from Dot Com Infoway"
+            class="certificate-image"
+            id="certificateImage"
+            hidden
+          >
+
+          <div class="certificate-placeholder" id="certificatePlaceholder">
+            <div>
+              <span>📜</span>
+              <strong>Internship Certificate</strong>
+              <p>Upload certificate.jpg to the repository root to display it here.</p>
+            </div>
+          </div>
+
+          <h3>Full Stack Development Internship</h3>
+          <p><strong>Organization:</strong> Dot Com Infoway Ltd.</p>
+          <p><strong>Project:</strong> Student Management System</p>
+          <p><strong>Location:</strong> Madurai</p>
+
+          <div class="buttons">
+            <a href="certificate.jpg" target="_blank"
+               rel="noopener noreferrer"
+               class="btn primary" id="viewCertificate" hidden>
+              View Certificate ↗
+            </a>
+
+            <a href="certificate.jpg" download
+               class="btn secondary" id="downloadCertificate" hidden>
+              Download Certificate ↓
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="certificate-placeholder">
+            <div>
+              <span>🤖</span>
+              <strong>Artificial Intelligence Internship</strong>
+              <p>Mindenious, Bangalore</p>
+            </div>
+          </div>
+
+          <h3>AI Internship Experience</h3>
+          <p>
+            Attended an Artificial Intelligence internship at
+            Mindenious, Bangalore.
+          </p>
+          <p>
+            Upload your AI internship certificate separately
+            when available.
+          </p>
+          <div class="tags">
+            <span>Artificial Intelligence</span>
+            <span>Mindenious</span>
+            <span>Bangalore</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <div>
+          <p class="eyebrow">Let's connect</p>
+          <h2>Have an opportunity?</h2>
+          <p>
+            I'm interested in learning opportunities, internships,
+            and projects that help me grow as a developer.
+            Feel free to get in touch.
+          </p>
+
+          <a class="btn primary"
+             href="mailto:your.email@example.com">
+            Email Me ↗
+          </a>
+        </div>
+
+        <div class="contact-links">
+          <h3>Contact Information</h3>
+
+          <a href="mailto:your.email@example.com">
+            ✉ your.email@example.com
+          </a>
+
+          <a href="https://www.linkedin.com/"
+             target="_blank" rel="noopener noreferrer">
+            ↗ Add your LinkedIn profile
+          </a>
+
+          <a href="https://github.com/"
+             target="_blank" rel="noopener noreferrer">
+            ↗ Add your GitHub profile
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> G. Archana. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Mobile navigation
+  const menu = document.getElementById("menu");
+  const navLinks = document.getElementById("navLinks");
+
+  menu.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+    menu.setAttribute("aria-expanded", String(isOpen));
+    menu.textContent = isOpen ? "✕" : "☰";
+  });
+
+  document.querySelectorAll("#navLinks a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menu.setAttribute("aria-expanded", "false");
+      menu.textContent = "☰";
+    });
+  });
+
+  // Show certificate links and image when the image exists
+  const certificateImage = document.getElementById("certificateImage");
+  const certificatePlaceholder =
+    document.getElementById("certificatePlaceholder");
+  const viewCertificate = document.getElementById("viewCertificate");
+  const downloadCertificate =
+    document.getElementById("downloadCertificate");
+
+  function showCertificate() {
+    certificateImage.hidden = false;
+    certificatePlaceholder.hidden = true;
+    viewCertificate.hidden = false;
+    downloadCertificate.hidden = false;
+  }
+
+  certificateImage.addEventListener("load", showCertificate);
+
+  certificateImage.addEventListener("error", () => {
+    certificateImage.hidden = true;
+    certificatePlaceholder.hidden = false;
+    viewCertificate.hidden = true;
+    downloadCertificate.hidden = true;
+  });
+
+  // Handle cached image loads
+  if (certificateImage.complete && certificateImage.naturalWidth > 0) {
+    showCertificate();
+  }
+
+  // Current copyright year
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
