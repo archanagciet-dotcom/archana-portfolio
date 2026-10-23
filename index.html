@@ -4,19 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="G. Archana's portfolio - Computer Science Engineering student, web developer, and AI enthusiast.">
-  <title>G. Archana | Portfolio</title>
+  <meta name="description" content="G. Archana's portfolio - Computer Science Engineering student and software developer.">
+  <title>G. Archana | Software Developer Portfolio</title>
 
   <style>
     :root {
-      --background: #0b1020;
-      --surface: #141c31;
-      --surface-light: #1c2742;
+      --bg: #0b1020;
+      --card: #141c31;
+      --card-hover: #1b2741;
       --text: #f4f6ff;
       --muted: #b6c0d8;
       --purple: #a78bfa;
       --cyan: #67e8f9;
-      --border: rgba(167, 139, 250, 0.25);
+      --border: rgba(167, 139, 250, .25);
     }
 
     * {
@@ -28,7 +28,7 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: var(--background);
+      background: var(--bg);
       color: var(--text);
       line-height: 1.7;
     }
@@ -45,37 +45,36 @@
     header {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(11, 16, 32, 0.96);
+      z-index: 10;
+      padding: 15px 6%;
+      background: rgba(11, 16, 32, .97);
       border-bottom: 1px solid var(--border);
-      padding: 15px 7%;
-      backdrop-filter: blur(12px);
     }
 
     nav {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
+      align-items: center;
       gap: 15px;
+      flex-wrap: wrap;
     }
 
     .logo {
-      font-size: 1.3rem;
+      font-size: 1.35rem;
       font-weight: bold;
       color: var(--purple);
     }
 
     nav ul {
       display: flex;
+      gap: 16px;
       flex-wrap: wrap;
-      gap: 18px;
       list-style: none;
     }
 
     nav ul a {
       color: var(--text);
-      font-size: 0.92rem;
+      font-size: .9rem;
     }
 
     nav ul a:hover {
@@ -104,7 +103,7 @@
       max-width: 650px;
     }
 
-    .hero-content .greeting {
+    .eyebrow {
       color: var(--cyan);
       font-weight: bold;
       letter-spacing: 2px;
@@ -112,7 +111,7 @@
     }
 
     h1 {
-      font-size: clamp(2.5rem, 6vw, 4.4rem);
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
       line-height: 1.2;
       margin: 12px 0;
     }
@@ -123,19 +122,18 @@
     }
 
     .hero-content p {
+      margin: 16px 0;
       color: var(--muted);
-      margin: 15px 0;
-      font-size: 1.05rem;
     }
 
     .profile-frame {
-      flex: 0 1 280px;
       width: 280px;
       height: 280px;
-      border-radius: 50%;
+      flex: 0 1 280px;
       padding: 6px;
+      border-radius: 50%;
       background: linear-gradient(135deg, var(--purple), var(--cyan));
-      box-shadow: 0 0 45px rgba(103, 232, 249, 0.15);
+      box-shadow: 0 0 45px rgba(103, 232, 249, .15);
     }
 
     .profile-photo {
@@ -144,28 +142,28 @@
       height: 100%;
       object-fit: cover;
       border-radius: 50%;
-      background: var(--surface);
+      background: var(--card);
     }
 
     .buttons {
       display: flex;
-      gap: 14px;
+      gap: 12px;
       flex-wrap: wrap;
       margin-top: 25px;
     }
 
     .btn {
       display: inline-block;
-      padding: 11px 20px;
+      padding: 10px 17px;
+      border: 1px solid var(--purple);
       border-radius: 9px;
       font-weight: bold;
-      border: 1px solid var(--purple);
-      transition: 0.2s;
+      transition: .2s;
     }
 
     .btn-primary {
-      background: var(--purple);
       color: #111326;
+      background: var(--purple);
     }
 
     .btn-secondary {
@@ -174,38 +172,38 @@
 
     .btn:hover {
       transform: translateY(-2px);
-      opacity: 0.88;
+      opacity: .88;
     }
 
     .section-title {
       text-align: center;
       font-size: clamp(1.8rem, 4vw, 2.5rem);
-      margin-bottom: 12px;
-    }
-
-    .section-intro {
-      text-align: center;
-      color: var(--muted);
-      max-width: 700px;
-      margin: 0 auto 35px;
+      margin-bottom: 10px;
     }
 
     .section-title span {
       color: var(--cyan);
     }
 
-    .about-text {
+    .section-intro {
+      max-width: 700px;
+      margin: 0 auto 32px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .about-box {
       max-width: 850px;
       margin: auto;
       padding: 28px;
-      background: var(--surface);
+      background: var(--card);
       border: 1px solid var(--border);
       border-radius: 16px;
       color: var(--muted);
     }
 
-    .about-text p + p {
-      margin-top: 15px;
+    .about-box p + p {
+      margin-top: 12px;
     }
 
     .grid {
@@ -217,15 +215,16 @@
     }
 
     .card {
-      padding: 25px;
-      background: var(--surface);
+      padding: 24px;
+      background: var(--card);
       border: 1px solid var(--border);
       border-radius: 15px;
-      transition: transform 0.2s, border-color 0.2s;
+      transition: .2s;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
+      background: var(--card-hover);
       border-color: var(--cyan);
     }
 
@@ -239,11 +238,11 @@
       color: var(--muted);
     }
 
-    .card ul {
-      padding-left: 20px;
+    .card p + p {
+      margin-top: 8px;
     }
 
-    .skills-list {
+    .skills {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -253,18 +252,18 @@
     }
 
     .skill {
-      background: var(--surface-light);
-      border: 1px solid var(--border);
-      padding: 10px 17px;
-      border-radius: 25px;
+      padding: 9px 16px;
       color: var(--cyan);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
     }
 
     .certificate-card {
       max-width: 760px;
       margin: auto;
       overflow: hidden;
-      background: var(--surface);
+      background: var(--card);
       border: 1px solid var(--border);
       border-radius: 16px;
     }
@@ -274,11 +273,11 @@
       width: 100%;
       max-height: 520px;
       object-fit: contain;
-      background: #fff;
+      background: white;
     }
 
     .certificate-info {
-      padding: 25px;
+      padding: 24px;
     }
 
     .certificate-info h3 {
@@ -294,9 +293,9 @@
     .contact-card {
       max-width: 700px;
       margin: auto;
+      padding: 32px;
       text-align: center;
-      padding: 35px;
-      background: var(--surface);
+      background: var(--card);
       border: 1px solid var(--border);
       border-radius: 16px;
     }
@@ -310,11 +309,11 @@
     footer {
       padding: 25px 8%;
       text-align: center;
-      border-top: 1px solid var(--border);
       color: var(--muted);
+      border-top: 1px solid var(--border);
     }
 
-    @media (max-width: 650px) {
+    @media (max-width: 700px) {
       header {
         padding: 14px 5%;
       }
@@ -325,7 +324,7 @@
 
       nav ul {
         justify-content: center;
-        gap: 12px;
+        gap: 11px;
       }
 
       section {
@@ -334,15 +333,10 @@
 
       .hero {
         text-align: center;
-        gap: 30px;
-      }
-
-      .hero-content {
-        order: 2;
+        gap: 28px;
       }
 
       .profile-frame {
-        order: 1;
         width: 210px;
         height: 210px;
         flex-basis: 210px;
@@ -358,8 +352,7 @@
 <body>
   <header>
     <nav>
-      <a href="#home" class="logo">Archana.dev</a>
-
+      <a class="logo" href="#home">Archana.dev</a>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -376,65 +369,55 @@
   <main>
     <section class="hero" id="home">
       <div class="hero-content">
-        <p class="greeting">Welcome to my portfolio</p>
+        <p class="eyebrow">Welcome to my portfolio</p>
         <h1>Hello, I'm <span>G. Archana</span></h1>
-        <h2 class="highlight">Computer Science Engineering Student</h2>
-
+        <h2 class="highlight">Software Developer & CSE Student</h2>
         <p>
           I am passionate about full-stack development, artificial
           intelligence, and building useful technology solutions.
-          Explore my skills, projects, internship experience, and
-          learning journey.
+          Explore my skills, projects, internships, and learning journey.
         </p>
 
         <div class="buttons">
-          <a class="btn btn-primary" href="#projects">Explore My Projects</a>
+          <a class="btn btn-primary" href="#projects">Explore Projects</a>
           <a class="btn btn-secondary" href="#contact">Contact Me</a>
+          <a class="btn btn-secondary" href="resume.pdf" download>
+            Download Resume
+          </a>
         </div>
       </div>
 
       <div class="profile-frame">
-        <img
-          src="profile.jpg"
-          alt="G. Archana profile photo"
-          class="profile-photo"
-        >
+        <img src="profile.jpg" alt="G. Archana profile photo"
+             class="profile-photo">
       </div>
     </section>
 
     <section id="about">
       <h2 class="section-title">About <span>Me</span></h2>
-      <p class="section-intro">
-        A little about my education, interests, and goals.
-      </p>
-
-      <div class="about-text">
+      <p class="section-intro">A little about my education and goals.</p>
+      <div class="about-box">
         <p>
           I am G. Archana, a Bachelor of Engineering student in
           Computer Science and Engineering at Coimbatore Institute
           of Engineering and Technology.
         </p>
         <p>
-          I have completed a Full Stack Development course and
-          participated in internships in Full Stack Development
-          and Artificial Intelligence.
+          I have an 8.99 CGPA and have completed a Full Stack
+          Development course through CSC. I have also participated
+          in internships in Full Stack Development and Artificial Intelligence.
         </p>
         <p>
           I enjoy learning new technologies, developing applications,
-          solving problems, and improving my technical skills.
-          My goal is to build reliable, user-friendly software and
-          continue growing as a technology professional.
+          solving problems, and improving my software development skills.
         </p>
       </div>
     </section>
 
     <section id="skills">
       <h2 class="section-title">Technical <span>Skills</span></h2>
-      <p class="section-intro">
-        Technologies and concepts I have learned and practiced.
-      </p>
-
-      <div class="skills-list">
+      <p class="section-intro">Technologies I have learned and practiced.</p>
+      <div class="skills">
         <span class="skill">HTML</span>
         <span class="skill">CSS</span>
         <span class="skill">JavaScript</span>
@@ -452,43 +435,36 @@
 
     <section id="education">
       <h2 class="section-title">My <span>Education</span></h2>
-      <p class="section-intro">My academic background.</p>
-
+      <p class="section-intro">Academic background.</p>
       <div class="grid">
         <article class="card">
           <h3>B.E. Computer Science and Engineering</h3>
           <p>Coimbatore Institute of Engineering and Technology</p>
-          <p>Currently pursuing</p>
+          <p><strong>Expected graduation:</strong> 2028</p>
+          <p><strong>CGPA:</strong> 8.99</p>
         </article>
       </div>
     </section>
 
     <section id="internships">
       <h2 class="section-title">Internship <span>Experience</span></h2>
-      <p class="section-intro">
-        Practical learning and experience through internships.
-      </p>
-
+      <p class="section-intro">Practical learning and experience.</p>
       <div class="grid">
         <article class="card">
           <h3>Full Stack Development</h3>
-          <p><strong>Dot Com Infoway</strong></p>
-          <p>Madurai</p>
+          <p><strong>Dot Com Infoway</strong> — Madurai</p>
           <p>
-            Worked on a Student Management System and gained
-            practical exposure to web development, application
-            functionality, and database integration.
+            Participated in full-stack development internship activities
+            and worked on a Student Management System.
           </p>
         </article>
 
         <article class="card">
           <h3>Artificial Intelligence</h3>
-          <p><strong>Mindenious</strong></p>
-          <p>Bangalore</p>
+          <p><strong>Mindenious</strong> — Bangalore</p>
           <p>
-            Participated in an AI internship to gain exposure
-            to artificial intelligence concepts and practical
-            learning activities.
+            Participated in an internship focused on Artificial
+            Intelligence and practical learning activities.
           </p>
         </article>
       </div>
@@ -496,60 +472,43 @@
 
     <section id="projects">
       <h2 class="section-title">My <span>Projects</span></h2>
-      <p class="section-intro">
-        A selection of projects I have worked on.
-      </p>
-
+      <p class="section-intro">Selected software development projects.</p>
       <div class="grid">
         <article class="card">
           <h3>Sentinel Vault</h3>
           <p>
-            A secure file vault application with authentication,
-            file upload and download, user-specific file access,
-            and a React frontend with a Spring Boot backend.
+            A secure file vault project featuring authentication,
+            user-specific file management, file upload, download,
+            and preview functionality.
           </p>
           <p class="highlight">Java · Spring Boot · React · MySQL</p>
+          <!-- Add your actual GitHub repository URL here when ready. -->
         </article>
 
         <article class="card">
           <h3>Student Management System</h3>
           <p>
-            A web application project focused on managing student
-            information and performing common student record
-            operations.
+            A web-based application project focused on managing
+            student information using a Flask backend and MySQL database.
           </p>
           <p class="highlight">HTML · CSS · JavaScript · Flask · MySQL</p>
+          <!-- Add your actual project repository URL here when ready. -->
         </article>
       </div>
     </section>
 
     <section id="certificates">
       <h2 class="section-title">My <span>Certificates</span></h2>
-      <p class="section-intro">
-        Courses and learning achievements.
-      </p>
-
+      <p class="section-intro">Course completion and learning achievements.</p>
       <div class="certificate-card">
-        <img
-          src="certificate.jpg"
-          alt="Full Stack Development course completion certificate"
-          class="certificate-image"
-        >
-
+        <img src="certificate.jpg"
+             alt="Full Stack Development course completion certificate"
+             class="certificate-image">
         <div class="certificate-info">
           <h3>Full Stack Development</h3>
-          <p>
-            Course Completion Certificate
-          </p>
-          <p>
-            Completed training in full-stack web development.
-          </p>
-          <a
-            class="btn btn-primary"
-            href="certificate.jpg"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <p>Course Completion Certificate — CSC</p>
+          <a class="btn btn-primary" href="certificate.jpg"
+             target="_blank" rel="noopener noreferrer">
             View Certificate
           </a>
         </div>
@@ -559,15 +518,25 @@
     <section id="contact">
       <h2 class="section-title">Contact <span>Me</span></h2>
       <p class="section-intro">
-        Feel free to contact me for opportunities and collaboration.
+        Feel free to connect about opportunities and collaboration.
       </p>
-
       <div class="contact-card">
         <h3>Let's Connect!</h3>
+        <p>
+          Phone:
+          <a href="tel:6385766158">6385766158</a>
+        </p>
         <p>
           Email:
           <a href="mailto:archana.g.ciet@gmail.com">
             archana.g.ciet@gmail.com
+          </a>
+        </p>
+        <p>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/archana-g-1119a0344"
+             target="_blank" rel="noopener noreferrer">
+            View my LinkedIn profile
           </a>
         </p>
         <p>
